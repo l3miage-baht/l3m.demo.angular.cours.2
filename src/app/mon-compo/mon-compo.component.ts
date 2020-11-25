@@ -5,7 +5,7 @@ import { Component, EventEmitter, Input, OnChanges, OnInit, Output, AfterContent
   selector: 'app-mon-compo',
   templateUrl: './mon-compo.component.html',
   styleUrls: ['./mon-compo.component.scss'],
-  changeDetection: ChangeDetectionStrategy.Default
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 // tslint:disable-next-line: max-line-length
 export class MonCompoComponent implements OnInit, OnChanges, AfterContentChecked, AfterContentInit, AfterViewInit, AfterViewChecked, OnDestroy {

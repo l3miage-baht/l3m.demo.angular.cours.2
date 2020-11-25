@@ -5,7 +5,7 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
   selector: 'app-mon-sous-compo',
   templateUrl: './mon-sous-compo.component.html',
   styleUrls: ['./mon-sous-compo.component.scss'],
-  changeDetection: ChangeDetectionStrategy.Default
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 // tslint:disable-next-line: max-line-length
 export class MonSousCompoComponent implements OnInit, OnChanges, AfterContentChecked, AfterContentInit, AfterViewInit, AfterViewChecked, OnDestroy {

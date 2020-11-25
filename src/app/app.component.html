@@ -2,6 +2,14 @@
 <p>
   Ouvrez la console de développement du navigateur pour voir les traces.
 </p>
+<p>
+  V1 : stratégie de détection des changements par défaut.
+  à chaque changement, tous les composants sont testés pour voir si un changement
+  doit leur être appliqué ou non.
+  Angular évalue les expressions et les compare avec leur valeur précédente.
+  Ca devient "lourd" si il y a beaucoup de composants.
+</p>
+
 
 <hr/>
 <button (click) = "displayComponent = !displayComponent">
