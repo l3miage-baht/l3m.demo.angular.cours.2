@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "life-cycle"
+  "defaultProject": "life-cycle",
+  "cli": {
+    "analytics": "f94b81ad-e4b2-43ae-b207-4105b15ef766"
+  }
 }

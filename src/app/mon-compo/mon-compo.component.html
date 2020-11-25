@@ -1,0 +1,12 @@
+<h3>Mon super composant </h3>
+<button (click)="clickBt()">Un jolie bouton</button>
+<section>
+  Un champs texte débranché :
+  <input type="text" />
+</section>
+<section>
+  Un champs texte branché à l'attribut txt :
+  <input [(ngModel)] = "txt" />
+</section>
+
+<app-mon-sous-compo monID="SC1"></app-mon-sous-compo>
