@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, AfterContentChecked,
   AfterContentInit, AfterViewInit, AfterViewChecked, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-mon-compo',
@@ -12,12 +13,11 @@ export class MonCompoComponent implements OnInit, OnChanges, AfterContentChecked
   @Input() data: unknown = undefined;
   @Output() clickButton = new EventEmitter<number>();
   txt = 'coucou';
-  nbTick = 0;
+  nbTick = interval(1000);
   compoIds: string[] = ['SC1', 'SC2'];
 
   constructor() {
     this.log('constructor');
-    setInterval( () => this.nbTick++, 1000 );
   }
 
   clickBt(): void {
