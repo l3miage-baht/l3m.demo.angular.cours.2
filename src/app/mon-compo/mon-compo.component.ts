@@ -13,10 +13,11 @@ export class MonCompoComponent implements OnInit, OnChanges, AfterContentChecked
   @Output() clickButton = new EventEmitter<number>();
   txt = 'coucou';
   nbTick = 0;
+  compoIds: string[] = ['SC1', 'SC2'];
 
   constructor() {
     this.log('constructor');
-    // setInterval( () => this.nbTick++, 1000 );
+    setInterval( () => this.nbTick++, 1000 );
   }
 
   clickBt(): void {

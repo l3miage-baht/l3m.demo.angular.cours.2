@@ -9,5 +9,6 @@
   <input [(ngModel)] = "txt" />
 </section>
 
-<app-mon-sous-compo monID="SC1"></app-mon-sous-compo>
-<app-mon-sous-compo monID="SC2"></app-mon-sous-compo>
+<app-mon-sous-compo *ngFor  = "let idC of compoIds"
+                    [monID] = "idC"
+></app-mon-sous-compo>
