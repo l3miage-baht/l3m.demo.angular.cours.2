@@ -5,22 +5,18 @@ import { Component, EventEmitter, Input, OnChanges, OnInit, Output, AfterContent
   selector: 'app-mon-compo',
   templateUrl: './mon-compo.component.html',
   styleUrls: ['./mon-compo.component.scss'],
-  changeDetection: ChangeDetectionStrategy.Default
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 // tslint:disable-next-line: max-line-length
 export class MonCompoComponent implements OnInit, OnChanges, AfterContentChecked, AfterContentInit, AfterViewInit, AfterViewChecked, OnDestroy {
   @Input() data: unknown = undefined;
   @Output() clickButton = new EventEmitter<number>();
-  lifeCycleTraces: unknown[][] = [];
   txt = 'coucou';
-  private pNbRendu = 0;
-  get nbRendus(): number {
-    this.log('Affichage du composant');
-    return ++this.pNbRendu;
-  }
+  nbTick = 0;
 
   constructor() {
     this.log('constructor');
+    // setInterval( () => this.nbTick++, 1000 );
   }
 
   clickBt(): void {
@@ -57,7 +53,6 @@ export class MonCompoComponent implements OnInit, OnChanges, AfterContentChecked
   }
 
   private log(...L: unknown[]): void {
-    this.lifeCycleTraces.push(L);
     console.log('MonCompo :', ...L);
   }
 }
